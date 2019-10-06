@@ -16,11 +16,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkAnswer() {
-        val answer = etAnswer.text.toString()
+        val answer = etAnswer.text.toString().toLowerCase()
 
         // When the answer equals "giraffe" then display a correct message using a toast message.
         // Otherwise display an incorrect message.
-        if (answer == getString(R.string.giraffe)) {
+        if (answer == getString(R.string.giraffe).toLowerCase()) {
             Toast.makeText(this, getString(R.string.correct), Toast.LENGTH_LONG).show()
         } else {
             Toast.makeText(this, getString(R.string.incorrect), Toast.LENGTH_LONG).show()
